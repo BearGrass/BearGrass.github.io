@@ -6,6 +6,7 @@ categories:
 tags:
   - deeplearning
   - study notes
+math: true
 ---
 # 深度学习入门笔记（一）
 ## 动机
