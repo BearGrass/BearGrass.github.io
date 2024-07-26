@@ -1,6 +1,6 @@
 ---
 title: "深度学习入门笔记（一）"
-date:   2024-07-26 11:06:00 +0800
+date:   2024-07-26 15:16:00 +0800
 categories:
   - ai
 tags:
@@ -61,8 +61,8 @@ math: true
 最终这一组$W$就是我们训练好的模型，可以用来进行分类了。
 具体如下：
 ### 设置基础参数
-1. 输入特征为$X = \begin{bmatrix} x_0 \\ x_1 \\ ... \\x_n \end{bmatrix}$
-2. 参数为$W = \begin{bmatrix} w_0 \\ w_1 \\ ... \\w_n \end{bmatrix}$
+1. 输入特征为$X = \begin{bmatrix} x_0 \\\\ x_1 \\\\ ... \\\\ x_n \end{bmatrix}$
+2. 参数为$W = \begin{bmatrix} w_0 \\\\ w_1 \\\\ ... \\\\ w_n \end{bmatrix}$
 3. 输出为$Y = W^T \dot{X}$ + b
 
 ### 损失函数
@@ -80,11 +80,11 @@ $L = -\hat{Y} \cdot log(Y) - (1 - \hat{Y}) \cdot log(1 - Y)$
 ![反向求梯度](/assets/20240726/反向求梯度.png)
 
 为了使得$\hat{Y}$变小，这个导数可以表示为：$d\hat{Y} = \frac{\partial L}{\partial Y} \cdot \frac{\partial Y}{\partial u} \cdot \frac{\partial u}{\partial W}$。  
-而$W$是一个参数矩阵$\frac{\partial u}{\partial W}$本质上是对于$W$的偏导数，可以理解为$u=x_1 \cdot w_1 + x_2 \cdot w_2 + ... w_n \cdot x_n+ b$，对于各个不同的$w$求导，由于有n个$w_i$，所以最终求得的偏导数可以表示为：$\begin{bmatrix} d_1 \\ d_2 \\ ... \\ d_n \end{bmatrix}$。
+而$W$是一个参数矩阵$\frac{\partial u}{\partial W}$本质上是对于$W$的偏导数，可以理解为$u=x_1 \cdot w_1 + x_2 \cdot w_2 + ... w_n \cdot x_n+ b$，对于各个不同的$w$求导，由于有n个$w_i$，所以最终求得的偏导数可以表示为：$\begin{bmatrix} d_1 \\\\ d_2 \\\\ ... \\\\ d_n \end{bmatrix}$。
 梯度下降法可以表示为：
-$W = W - \alpha \cdot \frac{\partial L}{\partial W}$  计算右侧的偏导后
-$W = W - \alpha \cdot \begin{bmatrix} d_1 \\ d_2 \\ ... \\ d_n \end{bmatrix}$ => 
-$W = \begin{bmatrix} w_0 \\ w_1 \\ ... \\ w_n \end{bmatrix} - \alpha \cdot \begin{bmatrix} d_0 \\ d_1 \\ ... \\ d_n \end{bmatrix}$
+* $W = W - \alpha \cdot \frac{\partial L}{\partial W}$
+* $W = W - \alpha \cdot \begin{bmatrix} d_1 \\\\ d_2 \\\\ ... \\\\ d_n \end{bmatrix}$ => 
+* $W = \begin{bmatrix} w_0 \\\\ w_1 \\\\ ... \\\\ w_n \end{bmatrix} - \alpha \cdot \begin{bmatrix} d_0 \\\\ d_1 \\\\ ... \\\\ d_n \end{bmatrix}$
 
 这里的$\alpha$是学习率，意思就是参数需要往这个方向调整的程度。
 附上老师的板书：
