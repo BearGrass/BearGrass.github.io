@@ -122,11 +122,11 @@ comments:
     repo_id: "R_kgDOMZ9vUg"
     category: "Announcements"
     category_id: "DIC_kwDOMZ9vUs4ChPzY"
-    mapping: "og:title" # optional, default to 'pathname'
+    mapping: "pathname" # optional, default to 'pathname'
     strict: "0" # optional, default to '0'
     input_position: "top" # optional, default to 'bottom'
     lang: "zh-CN" # optional, default to the value of `site.lang`
-    loading: "lazy" # optional, default to 'auto'
+    loading: "auto" # optional, default to 'auto'
     reactions_enabled: "1" # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
