@@ -2,10 +2,9 @@
 title: "我与茶叶的故事"
 date:   2024-09-06 13:35:00 +0800
 categories:
-
-- daily
-  tags:
-- daily
+  - daily
+tags:
+  - daily
 ---
 
 ![茶](/assets/2024-09-06-tea-with-me/茶.jpg)
